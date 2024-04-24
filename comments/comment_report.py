@@ -1,4 +1,3 @@
-from typing import List
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.common.by import By
 
@@ -22,6 +21,5 @@ class CommentReport:
             date = review_footer.find_element(By.CSS_SELECTOR, ':first-child').text
             likes = review_footer.find_element(By.CLASS_NAME, 'thumb-count').text
             report.append([index+1, reviewer, date, rating, comment, likes])
-        print(f'     ✔️ 총 {report[-1][0]}개의 리뷰를 수집했습니다.')
         return report
 
