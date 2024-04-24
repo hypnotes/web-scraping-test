@@ -23,3 +23,4 @@ class CommentReport:
             report.append([index+1, reviewer, date, rating, comment, likes])
         return report
 
+
